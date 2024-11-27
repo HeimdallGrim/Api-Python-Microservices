@@ -1,0 +1,14 @@
+{% extends 'base.j2' %}
+
+{% block title %}Résultats de Recherche - Ma Bibliothèque{% endblock %}
+
+{% block header %}Résultats de Recherche{% endblock %}
+
+{% block content %}
+    <h2>Résultats de Recherche</h2>
+    <ul>
+        {% for resultat in resultats %}
+            <li>{{ resultat.id }} - {{ resultat.titre }} - {{ resultat.auteur }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

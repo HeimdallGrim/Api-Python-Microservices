@@ -1,0 +1,14 @@
+{% extends 'base.j2' %}
+
+{% block title %}Emprunts - Ma Bibliothèque{% endblock %}
+
+{% block header %}Emprunts{% endblock %}
+
+{% block content %}
+    <h2>Liste des Emprunts</h2>
+    <ul>
+        {% for emprunt in emprunts %}
+            <li>{{ emprunt.id }} - {{ emprunt.livre.titre }} - {{ emprunt.utilisateur.nom }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
